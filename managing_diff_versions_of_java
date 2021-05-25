@@ -1,0 +1,20 @@
+This is a plain text document published to help you with managing multiple java versions on Mac OS.
+
+Here is the situation:
+    1. You have 2 versions of java installed in your laptopn, one is java 1.8 and java 11.
+    2. You need to switch between thesee two versions seemlessly whenever you need'em
+    
+Solution:
+
+1. Open bash_profile file
+      vi ~/.bash_profile
+2. Add following lines in there 
+      alias j11="export JAVA_HOME=$(/usr/libexec/java_home -v 11); java -version"
+      alias j8="export JAVA_HOME=$(/usr/libexec/java_home -v 1.8); java -version"
+      
+3. Open a new terminal
+4. Run j11 to switch to Java 11
+5. Run j8 to switch back to java 1.8
+
+Yahoo!!!
+
